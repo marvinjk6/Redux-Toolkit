@@ -1,5 +1,5 @@
-# Redux-Toolkit
-Tutorial de Redux-Toolkit
+# Redux-Toolkit Youtube channel Codevolution
+Tutorial de Redux-Toolkit 
 
 ### Redux Toolkit
 
@@ -27,7 +27,7 @@ Tutorial de Redux-Toolkit
 
 * 3- To specify ho the state is updated based an actions, you write pure reducers.
     - Reducer - (previousState, action) => newState.
-    
+
 
 
 
