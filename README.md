@@ -36,3 +36,10 @@ In this scenario, everyday a vendro comes to the shop to restock the shelves. Th
     - quantity is passed as a parameter for the action;
     - in redux the convention is to use payload for any addtional information you want to send;
     - see the differences of how the actions were passed in the reducer (CAKE_ORDERED - CAKE_RESTOCKED)
+
+## Bind action creators
+
+until this moment we invoke dispatch on the store an pass in the action -> store.dispatch(orderCake()), but there is an alternative way
+- import bind action creators -> redux.bindActionCreators
+- first parameter is an object with the actions;
+- second the store method - store.dispatch;
