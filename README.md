@@ -56,4 +56,18 @@ We have a cake shop, and we have cakes stored on the shelf, the business is doin
 * now we're going to create two reducers and combine them, this is a better approach, using the redux method combineReducers;
 * when we dispatch and action, both reducers receive the action but the action just occurs for the especifc reducer
 * the combineReducers method receive as parameters an object with the two reducers, we can put a key(cake) and the value(CakeReducer)
+
+## Immer - library to work with Redux
+
+Earlier when we defined a reducer we learned that we should never mutate the state and always return a new object that resembles the next state, we've done that with both reducer cake and ice Cream. We have been careful to ensure the existing state is copied and only the necessary property is updated, so spread the state (...state) and change number of cakes and ice Creams.
+
+In more complex applications to update the state of an element is more complex and becomes a pain to deal with it due the necessity to make a copy of the state many times ...spread
+* in the reducer we need 
+
+* to help we can use a library called npm install immer
+* import the produce method
+* produce has two parameters state and draft
+    - produce (state, (draft) => {
+        return draft.
+    }
  

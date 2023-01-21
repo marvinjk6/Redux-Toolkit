@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/marvinjk6/Redux-Toolkit#readme",
   "dependencies": {
+    "immer": "^9.0.18",
     "redux": "^4.2.0"
   }
 }
