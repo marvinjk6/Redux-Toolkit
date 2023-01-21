@@ -50,3 +50,10 @@ We have a cake shop, and we have cakes stored on the shelf, the business is doin
 
 * create the initial state, action and reducer for the ice cream
 * we can put the actions of iceCream in the same reducer of cakes - but this is not a good approach
+
+## Cake and Ice Cream - Combine Reducers 
+
+* now we're going to create two reducers and combine them, this is a better approach, using the redux method combineReducers;
+* when we dispatch and action, both reducers receive the action but the action just occurs for the especifc reducer
+* the combineReducers method receive as parameters an object with the two reducers, we can put a key(cake) and the value(CakeReducer)
+ 
