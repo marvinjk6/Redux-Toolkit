@@ -43,3 +43,10 @@ until this moment we invoke dispatch on the store an pass in the action -> store
 - import bind action creators -> redux.bindActionCreators
 - first parameter is an object with the actions;
 - second the store method - store.dispatch;
+
+## Cakes and Ice Creams - Multiple Reducers
+
+We have a cake shop, and we have cakes stored on the shelf, the business is doing very well and the shop wants to sell ice creams in addition to cakes, now we have two shopkeepers, one for the cakes and other for the ice creams
+
+* create the initial state, action and reducer for the ice cream
+* we can put the actions of iceCream in the same reducer of cakes - but this is not a good approach
