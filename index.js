@@ -2,8 +2,8 @@
 const redux = require('redux');
 const createStore = redux.createStore;
 
-
 const CAKE_ORDERED = 'CAKE_ORDERED';
+
 const CAKE_RESTOCKED = 'CAKE_RESTOCKED'
 
 function orderCake() {
@@ -19,7 +19,6 @@ function restockCake(qty) {
         payload: qty
     }
 }
-
 
 
 const initialState = {
@@ -39,14 +38,12 @@ const reducer = (state = initialState, action) => {
         case CAKE_RESTOCKED:
             return {
                 ...state,
-                numOfCakes: state.numOfCakes + action.payload
             }
         default:
             return state;
     }
 
 }
-
 
 const store = createStore(reducer);
 console.log('Initial state', store.getState());

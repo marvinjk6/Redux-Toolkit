@@ -30,7 +30,6 @@ Tutorial de Redux-Toolkit
 
 ## Restocking cakes
 
-
 In this scenario, everyday a vendro comes to the shop to restock the shelves. The vendor can stock up one or more number of cakes depending on the previous day sales.
 
 * was created a new action restockCake(qtd)
