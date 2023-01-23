@@ -108,4 +108,20 @@ State of the application:
         * return the error from API
             - error: error
 
+
+## Redux thunk Middleware
+
+Now we'll learn how to use action creators with network requests, that is how to make an api call when working with redux, well need two packages
+
+* Axios: will be used to make get requests to an API endpoint
+* Redux-thunk: is the standard way to define asynchronous actions creators in applications, is basically a middleware we will applying to our redux store
+* npm i axios redux-thunk
+* second step is to get applyMiddleware, and pass it as a second parameter of createStore()
+* third step is to import thunk middleware
+
+fetchUsers is an action creator, we have leanrd so far is that an action creator returns an action, but what the thunk middleware brings to the the table is the ability for an action creator to return a function instead an action object
+
+* use the jsonplaceholder 
+ 
+
  
