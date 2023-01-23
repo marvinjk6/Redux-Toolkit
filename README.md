@@ -128,4 +128,9 @@ fetchUsers is an action creator, we have leanrd so far is that an action creator
 
 Now we're going to develop the same cake and ice cream shop application but this time with Redux Toolkit
 
+Redux toolkit has some opinions on the folder structure, and we're going to follow the same.
+- The folder App with store.js;
+- the folder features;
+
+
  
