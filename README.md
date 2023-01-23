@@ -80,6 +80,32 @@ This library basically logs all information releted to redux in the application.
 * 
 * import redux.applyMiddleware - pass it as an argument to createStore(), and pass in the middleware to the applyMeddleware method
 
+### Async Actions
 
+The application we are going to build will fecth a list of users from an API endpoint and stores this in the redux store:
+
+State of the application:
+* Properties:
+    -   loading: indicates whether the data is currently being fetched or not
+    -   data: the data is an list of users, the initial state is an empty array
+    -   error: the api request might fail for some reason, in that scenario we get an error, the initial state is sring empty ''
+
+* Actions:
+    -   FETCH_USERS_REQUESTED - a list of users have been requested from the api endpoint
+    -   the second and third action are dependent on the first one
+        *   if the data was fecthed successfully we have an action with the type FETCH_USERS_SUCCEEDED
+        * if there's an error we have an action whith type FETCH_USERS_FAILED
+
+* Reducer:
+    -   if the action type is FETCH_USERS_REQUESTED
+        * loading: true
+    -   if the action type is FETCH_USERS_SUCCEEDED
+        * loading: false
+        * return the data from the API
+            -  users: data (from API)
+    -   if actions type is FETCH_USERS_FAILED
+        * loading: false
+        * return the error from API
+            - error: error
 
  
