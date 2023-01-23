@@ -2,13 +2,13 @@
 const configureStore = require('@reduxjs/toolkit').configureStore;
 
 //import logger
-const reduxLogger = require('redux-logger');
+//const reduxLogger = require('redux-logger');
 
 const cakeReducer = require('../features/cake/cakeSlice');
 const iceCreamReducer = require('../features/icecream/iceCreamSlice');
 
 // create logger
-const logger = reduxLogger.createLogger();
+//const logger = reduxLogger.createLogger();
 
 
 // configureStore accepts an object as argument
@@ -20,7 +20,7 @@ const store = configureStore({
     },
 
     //middleware
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
+    //middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })
 
 module.exports = store;
