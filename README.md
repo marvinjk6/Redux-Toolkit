@@ -180,4 +180,3 @@ With redux toolkit we use configure store to define our store
 
  * in index.js remove console.log and in the subscribe method
     - when run node index, well see the actions tyoe in green, the redux-toolkit take care of this, the name of the type comes from the slices key name
-
