@@ -132,5 +132,11 @@ Redux toolkit has some opinions on the folder structure, and we're going to foll
 - The folder App with store.js;
 - the folder features;
 
+##  Cake Slice
+
+We're going to define the actions and reducers, the recommendations is to group together the reducer logic and actions for a single feature in a single file, the file should contain slice as suffix;
+- cakeSlice.js
+- iceCreamSlice.js
+
 
  
