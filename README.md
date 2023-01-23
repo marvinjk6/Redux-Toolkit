@@ -70,4 +70,16 @@ In more complex applications to update the state of an element is more complex a
     - produce (state, (draft) => {
         return draft.
     }
+
+### Middleware 
+
+Here we'll learn how to use middleware in Redux, the middleware will be incorporating into our cake and ice cream shop application is redux logger.
+This library basically logs all information releted to redux in the application.
+* npm install redux-logger
+* const reduxLogger = require('redux-logger');
+* 
+* import redux.applyMiddleware - pass it as an argument to createStore(), and pass in the middleware to the applyMeddleware method
+
+
+
  

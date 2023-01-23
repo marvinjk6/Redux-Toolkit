@@ -2,18 +2,22 @@
 const redux = require('redux');
 const createStore = redux.createStore;
 const bindCreator = redux.bindActionCreators;
-// Combine Reducers redux method
 const combineReducers = redux.combineReducers;
 
-//type of cake actions
+// function to use middleware 
+const applyMiddleware = redux.applyMiddleware;
+
+// require redux-logger and create logger
+const reduxLogger = require('redux-logger');
+const logger = reduxLogger.createLogger();
+
 const CAKE_ORDERED = 'CAKE_ORDERED';
 const CAKE_RESTOCKED = 'CAKE_RESTOCKED';
 
-//type of Ice Creams actions
 const ICECREAM_ORDERED = 'ICECREAM_ORDERED';
 const ICECREAM_RESTOCKED = 'ICECREAM_RESTOCKED';
 
-// Cake Actions
+
 function orderCake(qty) {
     return {
         type: CAKE_ORDERED,
@@ -28,7 +32,6 @@ function restockCake(qty) {
     }
 }
 
-//Ice Cream Actions
 function orderIceCream(qty) {
     return {
         type: ICECREAM_ORDERED,
@@ -43,17 +46,14 @@ function restockIceCream(qty) {
     }
 }
 
-// cake inicial state
 const cakeInitialState = {
     numOfCakes: 10,
 }
 
-// ice cream initial state
 const iceCreamInitialState = {
     numOfIceCreams: 10,
 }
 
-//cake reducer
 const cakeReducer = (state = cakeInitialState , action) => {
 
     switch (action.type) {
@@ -75,7 +75,6 @@ const cakeReducer = (state = cakeInitialState , action) => {
 
 }
 
-//ice cream reducer
 const iceCreamReducer = (state = iceCreamInitialState , action) => {
 
     switch (action.type) {
@@ -104,12 +103,12 @@ const combinedReducers = combineReducers({
     iceCream: iceCreamReducer
 })
 
-
-const store = createStore(combinedReducers);
+//use the applyMiddleware as a second parameter os store, and logger in applyMiddleare
+const store = createStore(combinedReducers, applyMiddleware(logger));
 console.log('Initial state', store.getState());
 
-
-const unsubscribe = store.subscribe(()=>console.log('update state', store.getState()));
+//remove the consolelog
+const unsubscribe = store.subscribe(()=>{});
 
 // store.dispatch(orderCake());
 // store.dispatch(orderCake());
