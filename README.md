@@ -135,8 +135,17 @@ Redux toolkit has some opinions on the folder structure, and we're going to foll
 ##  Cake Slice
 
 We're going to define the actions and reducers, the recommendations is to group together the reducer logic and actions for a single feature in a single file, the file should contain slice as suffix;
+- create a feature slice using the createSlice function, wich generates actions and reducers;
 - cakeSlice.js
 - iceCreamSlice.js
 
+## Configuring Store
+
+With redux toolkit we use configure store to define our store 
+
+* cakeSlice.js
+    
+    - create the store using configure store function
+    - dispatch actions on the store using store.dispatch
 
  
