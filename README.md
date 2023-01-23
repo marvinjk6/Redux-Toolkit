@@ -169,4 +169,15 @@ With redux toolkit we use configure store to define our store
     - import iceCreamActions
     - dispacth iceCreamActions (ordered and restocked)
 
- 
+ ### Logger Middleware
+
+ The middleware we will apply is the same logger middleware we had used when working with plane redux and this is because it serves two purposes:
+ * 1: we will leanr how to extend redux toolkit funcionality using middleware
+ * 2: the logger middleware will give insight into the actions dispatched that we neede to see and understand what redux toolkit does under the herd
+ * npm i redux-logger
+    - firt create a logger for the application in store.js
+    - to apply this logger middleware we especify the middleware property after reducer
+
+ * in index.js remove console.log and in the subscribe method
+    - when run node index, well see the actions tyoe in green, the redux-toolkit take care of this, the name of the type comes from the slices key name
+
