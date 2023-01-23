@@ -148,4 +148,25 @@ With redux toolkit we use configure store to define our store
     - create the store using configure store function
     - dispatch actions on the store using store.dispatch
 
+## Ice Cream Feature
+
+* Fist start with slice -> create iceCreamSlice.js in the folder features
+    - require the function createSlice
+    - set the initial state
+    - put createSlice in a const -> createSlice receive as parameter an objcet with:
+        * name
+        * initialState
+        * reducers
+    - module.exports = iceCreamSlice.reducer
+    - module.exports.iceCreamActions = iceCreamSlice.actions
+
+* Second in the store import iceCreamSlice
+    - add the iceCreamSlice in the reducer
+    - iceCream: iceCreamSlice
+    - we don't need to use combine reducers
+
+* Third at index.js
+    - import iceCreamActions
+    - dispacth iceCreamActions (ordered and restocked)
+
  
