@@ -68,3 +68,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.user_list {
+  list-style: none;
+}
+
+.user_list > li {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 3px #ccc;
+  background-color: #535bf2;
+}

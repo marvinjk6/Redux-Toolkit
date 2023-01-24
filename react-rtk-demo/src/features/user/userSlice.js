@@ -9,10 +9,13 @@ const initialState = {
 }
 
 // Generates pending, fullfilled and rejected action types
+// we have the async logic written using the create async thunk function
+// first argument is the action type
+// second argument is a async function which returns a promise
+// before we're catching the id, now we have the browser so lets get the entire object
 export const fetchUsers = createAsyncThunk('user/fetchUsers', ()=>{
-    // return
     return axios.get('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.data.map(user => user.id))
+    .then(response => response.data)
 })
 
 const userSlice = createSlice({

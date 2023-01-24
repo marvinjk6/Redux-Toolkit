@@ -255,3 +255,8 @@ that is one of the most helpfull tools, the redux devtools to use is necessary t
 * after when click in diff and after this in the action is possible to see the change of the value before and after the action was dispatched
 * in the bottom there are >_ this is and dispatcher, its possible to dispatch actions by writing the type
 
+### fetching data
+
+Let's see how to make use of the async thunk in the userSlice to fetch and display data in our user view component.
+Our goal now is  to fetch the list of users (entire user object),  in the userViewComponent. This is going to be a combination of the useSelector and useDispatch hooks couple with the useEffect hook and list rendering from react
+
