@@ -225,7 +225,8 @@ Let's prepare our react code to access the redux store.
 * For step 2 we need to make the redux-store available to the react component tree and this is where the react redux library makes its first appearance
     - in main.jsx or index.js if you've used create-react-app at the top import Provider from react-redux
     - and store from './App/store', pass store as propertie of Provider
-    
+    - wrap <App /> with Provider and pass store as a propertie <Provider store={store}>   
+    - this is basically what we need to connect React app with redux, now we can start reading values from the store and dispatch actions to the store.
 
 
 
