@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import './App.css'
 import { CakeView } from './features/cake/CakeViews'
 import { IceCreamView } from './features/icecream/IceCreamViem'
 import { UserView } from './features/user/UserView'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <h1>Olá mundo</h1>
      <CakeView />
      <IceCreamView />
      <UserView />

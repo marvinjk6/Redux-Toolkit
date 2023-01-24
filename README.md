@@ -215,6 +215,17 @@ We are going to focus only on the project setup using vite,
 * navigate inside the project folder and install the dependecies -> npm install 
 * copy and paste the app and features folders in src folder
 * npm install axios @reduxjs/toolkit at reat-rtk-demo
-* change imports and exports to es module syntax
+* change imports and exports to ES module syntax
+
+## Provider
+
+Let's prepare our react code to access the redux store.
+* The first step is to install the react redux package which provides us componentes and functions that we can use
+
+* For step 2 we need to make the redux-store available to the react component tree and this is where the react redux library makes its first appearance
+    - in main.jsx or index.js if you've used create-react-app at the top import Provider from react-redux
+    - and store from './App/store', pass store as propertie of Provider
+    
+
 
 
