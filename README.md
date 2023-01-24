@@ -246,3 +246,12 @@ useDispatch hook is used to dispatch an action in React-Redux
 * this hooks returns a reference to the dispacth function from the redux store, save the reference in a constant called dispatch = useDispatch()
 * see the CakeViews and IceCreamViews code there are some complements of the video
 
+## Redux Devtools
+
+that is one of the most helpfull tools, the redux devtools to use is necessary to install the browser extension.
+* We can use redux devtool for the extensions, or for the inspection rigth button of the mouse -> select the arrow -> redux
+* it is very helpful for debbuging
+* when click in state and an action is dispatched is possible to see what action is
+* after when click in diff and after this in the action is possible to see the change of the value before and after the action was dispatched
+* in the bottom there are >_ this is and dispatcher, its possible to dispatch actions by writing the type
+
