@@ -1,4 +1,3 @@
-// import cakeActios from cakeSlice.js
 const { cakeActions } = require('../cake/cakeSlice');
 
 const createSlice = require('@reduxjs/toolkit').createSlice;
@@ -30,15 +29,6 @@ const iceCreamSlice = createSlice({
             state.numOfIceCreams--
         })
     }
-
-    // the name is the same generated at cakeSlice and the method ordered, we saw 'cake/ordered' at Logger Midleware
-    /*** this is not the recomended way
-    extraReducers: {
-        ['cake/ordered']: (state) => {
-            state.numOfIceCreams--
-        }
-    }
-    **/
 })
 
 module.exports = iceCreamSlice.reducer
