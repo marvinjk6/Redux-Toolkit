@@ -206,3 +206,15 @@ Now we're going to learn how to work with asynchronous actions using redux-toolk
         * the function will automatically dispatch lifecycle actions based on the returned promise (fetchUsers generates pending, fulfilled and rejected action types)
     - we need axios npm i axios -> import axios
 
+## React Project Setup
+
+We are going to focus only on the project setup using vite, 
+* npm create vite@latest react-rtk-demo
+* Select React
+* javascript
+* navigate inside the project folder and install the dependecies -> npm install 
+* copy and paste the app and features folders in src folder
+* npm install axios @reduxjs/toolkit at reat-rtk-demo
+* change imports and exports to es module syntax
+
+
