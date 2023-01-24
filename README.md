@@ -228,5 +228,13 @@ Let's prepare our react code to access the redux store.
     - wrap <App /> with Provider and pass store as a propertie <Provider store={store}>   
     - this is basically what we need to connect React app with redux, now we can start reading values from the store and dispatch actions to the store.
 
+## useSelector
 
+useSelector hook is used to get hold of any state that is mainteined in the redux store, numOfCakes which is stored in the cakeSlice and displayed in the CakeView component 
+
+* first import useSelector
+this hooks accpets a function as its parameter, this function is called selector function
+* receives the redux state as its argument
+* the store contains multiples reducers, the key cake represents cakeReducer, one of them
+* useSelector hooks returns whatever is returned by the selector function
 
