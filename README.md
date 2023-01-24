@@ -238,3 +238,11 @@ this hooks accpets a function as its parameter, this function is called selector
 * the store contains multiples reducers, the key cake represents cakeReducer, one of them
 * useSelector hooks returns whatever is returned by the selector function
 
+## useDispacth 
+
+useDispatch hook is used to dispatch an action in React-Redux
+* first import useDispatch from react redux
+* import action creators from cakeSlice and iceCreamSlice
+* this hooks returns a reference to the dispacth function from the redux store, save the reference in a constant called dispatch = useDispatch()
+* see the CakeViews and IceCreamViews code there are some complements of the video
+

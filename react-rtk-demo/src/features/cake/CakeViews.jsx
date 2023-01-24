@@ -1,6 +1,7 @@
 import React from "react";
-// import useSelector from react-redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
+import { ordered, restocked} from "../cake/cakeSlice"
+
 
 export const CakeView = () => {
 
@@ -10,11 +11,15 @@ export const CakeView = () => {
     // useSelector hooks returns whatever is returned by the selector function
     const numOfCakes = useSelector((state) => state.cake.numOfCakes)
 
+    // this hooks returns a reference to the dispacth function from the redux store, save the reference in a constant called dispatch
+    const dispatch = useDispatch()
+
+
     return (
         <div>
             <h2>Number of cakes - {numOfCakes}</h2>
-            <button>Order cake</button>
-            <button>Restock cakes</button>
+            <button onClick={()=>dispatch(ordered())}>Order cake</button>
+            <button onClick={()=>dispatch(restocked())}>Restock cakes</button>
         </div>
     )
 }

@@ -14,9 +14,8 @@ const iceCreamSlice = createSlice({
             state.numOfIceCreams--
         },
 
-        // || was used in the case of don't pass a payload
         restocked: (state, action) => {
-            state.numOfIceCreams += action.payload || 1
+            state.numOfIceCreams += action.payload
         }   
     },
     extraReducers: (builder) => {
